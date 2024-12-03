@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background: linear-gradient(to bottom, black, #111);
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 0;
+}
+
+p {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #111, #222);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: crimson;
+  text-shadow: 0 0 10px crimson, 0 0 20px crimson;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: crimson;
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.welcome {
+  background: linear-gradient(120deg, #111, crimson);
+  animation: pulse 5s infinite;
+}
+
+.red-text {
+  color: crimson;
+  text-shadow: 0 0 10px crimson, 0 0 20px crimson;
+  animation: flicker 2s infinite;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    background: linear-gradient(120deg, #111, crimson);
+  }
+  50% {
+    background: linear-gradient(120deg, #111, #ff4d4d);
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Section: Information */
+#information {
+  background: linear-gradient(to bottom, #111, #222);
+  color: white;
+  padding: 80px 20px;
+  border-top: 2px solid crimson;
+  border-bottom: 2px solid crimson;
+}
+
+#information h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: crimson;
+  text-shadow: 0 0 10px crimson, 0 0 20px crimson;
+}
+
+#information p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+#information ol {
+  list-style: decimal;
+  padding-left: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+#information ol li {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  color: white;
+  position: relative;
+}
+
+#information ol li::before {
+  color: crimson;
+  font-size: 1.2em;
+  position: absolute;
+  left: -30px;
+}
+
+#information ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #ccc;
+}
+
+#information ul li {
+  margin-bottom: 10px;
+}
+
+#information img {
+  max-width: 80%;
+  margin: 20px auto;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Hover effects for list items */
+#information ol li:hover {
+  color: crimson;
+  transition: color 0.3s ease;
+}
+
+/* Section: Tools */
+#tools {
+  background: linear-gradient(to bottom, #111, #222);
+  color: white;
+  padding: 80px 20px;
+  border-top: 2px solid crimson;
+  border-bottom: 2px solid crimson;
+}
+
+#tools h2 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: crimson;
+  text-shadow: 0 0 10px crimson, 0 0 20px crimson;
+}
+
+#tools p {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+.tool-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.tool-item {
+  background: #222;
+  padding: 20px;
+  border: 1px solid crimson;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.5);
+}
+
+.tool-item h3 {
+  font-size: 1.8em;
+  color: crimson;
+  margin-bottom: 10px;
+}
+
+.tool-item p {
+  font-size: 1em;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.tool-item ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.tool-item ul li {
+  color: white;
+  margin-bottom: 10px;
+}
+
